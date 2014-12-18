@@ -3,8 +3,176 @@ K4
 z2
 13
 cModel Technology
-dD:/Bitman/EDA Project/modelsim
+Z0 dD:/Bitman/EDA Project/modelsim
 !s112 0.1
 !i10d 8192
 !i10e 25
 !i10f 100
+vCLA
+Z1 !s110 1418891370
+Z2 IYIk<`zkRn9_z]c]@UFZ932
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dD:/Bitman/EDA Project/FastMultiplier
+Z5 w1418849428
+Z6 8D:/Bitman/EDA Project/FastMultiplier/CLA.v
+Z7 FD:/Bitman/EDA Project/FastMultiplier/CLA.v
+L0 1
+Z8 OL;L;10.2c;57
+r1
+31
+Z9 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z10 n@c@l@a
+Z11 !s100 od196eSaK;F`mKHWYPOY?3
+Z12 !s108 1418891370.421000
+Z13 !s107 D:/Bitman/EDA Project/FastMultiplier/CLA.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/CLA.v|
+!i10b 1
+!s85 0
+!i111 0
+vCLA_Array_32
+R1
+Z15 I=dc0AkHF<oYm>Ei1PjMcN3
+R3
+R4
+Z16 w1418889406
+Z17 8D:/Bitman/EDA Project/FastMultiplier/CLA_Array_32.v
+Z18 FD:/Bitman/EDA Project/FastMultiplier/CLA_Array_32.v
+L0 1
+R8
+r1
+31
+R9
+Z19 n@c@l@a_@array_32
+Z20 !s100 ePcaB8n>1DSWa1P:[mSab2
+Z21 !s108 1418891370.588000
+Z22 !s107 D:/Bitman/EDA Project/FastMultiplier/CLA_Array_32.v|
+Z23 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/CLA_Array_32.v|
+!i10b 1
+!s85 0
+!i111 0
+vCSA
+R1
+Z24 IIlhz=Zn@ckbUaSX>3TIMi1
+R3
+R4
+Z25 w1418849441
+Z26 8D:/Bitman/EDA Project/FastMultiplier/CSA.V
+Z27 FD:/Bitman/EDA Project/FastMultiplier/CSA.V
+L0 1
+R8
+r1
+31
+R9
+Z28 n@c@s@a
+!i10b 1
+Z29 !s100 LEcl99K:Ez2Zi5fL1d=Uf2
+!s85 0
+Z30 !s108 1418891370.776000
+Z31 !s107 D:/Bitman/EDA Project/FastMultiplier/CSA.V|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/CSA.V|
+!i111 0
+vFA
+R1
+!i10b 1
+!s100 naIK5>3>ZWEWh]fSF:[0N3
+IO>fhUlkH=^]R@i][8ebiE3
+R3
+R4
+Z33 w1418843545
+8D:/Bitman/EDA Project/FastMultiplier/FA.v
+FD:/Bitman/EDA Project/FastMultiplier/FA.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1418891370.943000
+!s107 D:/Bitman/EDA Project/FastMultiplier/FA.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/FA.v|
+!i111 0
+R9
+n@f@a
+vHA
+R1
+Z34 IRh9a`24]`h?6_<B2;2;==3
+R3
+R4
+R33
+Z35 8D:/Bitman/EDA Project/FastMultiplier/HA.v
+Z36 FD:/Bitman/EDA Project/FastMultiplier/HA.v
+L0 1
+R8
+r1
+31
+R9
+n@h@a
+Z37 !s100 ?h2`jXNH`DT>jY;8`BB9O3
+Z38 !s108 1418891370.233000
+Z39 !s107 D:/Bitman/EDA Project/FastMultiplier/HA.v|
+Z40 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/HA.v|
+!i10b 1
+!s85 0
+!i111 0
+vtestbench_CLA
+Z41 IL5LLK:[nBdEiQGNd@e9SI2
+R3
+R4
+Z42 w1418849383
+Z43 8D:/Bitman/EDA Project/FastMultiplier/testbench-CLA.v
+Z44 FD:/Bitman/EDA Project/FastMultiplier/testbench-CLA.v
+L0 1
+R8
+r1
+31
+R9
+Z45 ntestbench_@c@l@a
+Z46 !s110 1418891369
+Z47 !s100 ]@E[?6;9OB?Oo@P6VnoUM0
+Z48 !s108 1418891369.801000
+Z49 !s107 D:/Bitman/EDA Project/FastMultiplier/testbench-CLA.v|
+Z50 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/testbench-CLA.v|
+!i10b 1
+!s85 0
+!i111 0
+vtestbench_CLA_Array_32
+R46
+Z51 II^L]H89z4z^ZgzedbMJL00
+R3
+R4
+Z52 w1418890931
+Z53 8D:/Bitman/EDA Project/FastMultiplier/testbench-CLA_Array_32.v
+Z54 FD:/Bitman/EDA Project/FastMultiplier/testbench-CLA_Array_32.v
+L0 1
+R8
+r1
+31
+R9
+Z55 ntestbench_@c@l@a_@array_32
+Z56 !s100 ;f?5DUN5gCemD^]YCoceO3
+Z57 !s108 1418891369.878000
+Z58 !s107 D:/Bitman/EDA Project/FastMultiplier/testbench-CLA_Array_32.v|
+Z59 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/testbench-CLA_Array_32.v|
+!i10b 1
+!s85 0
+!i111 0
+vtestbench_CSA
+Z60 IL?7C[zT_VeEBoDF6[IhbQ1
+R3
+R4
+Z61 w1418849368
+Z62 8D:/Bitman/EDA Project/FastMultiplier/testbench-CSA.v
+Z63 FD:/Bitman/EDA Project/FastMultiplier/testbench-CSA.v
+L0 1
+R8
+r1
+31
+R9
+Z64 ntestbench_@c@s@a
+R1
+Z65 !s100 e<KCWfdE0?8^z[]m5FI5<3
+Z66 !s108 1418891370.067000
+Z67 !s107 D:/Bitman/EDA Project/FastMultiplier/testbench-CSA.v|
+Z68 !s90 -reportprogress|300|-work|work|-vopt|D:/Bitman/EDA Project/FastMultiplier/testbench-CSA.v|
+!i10b 1
+!s85 0
+!i111 0
