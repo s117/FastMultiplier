@@ -3,24 +3,21 @@ input wire [31:0] mulcand;
 input wire [2:0] r4input;
 input wire sign;
 
-output wire [31:0] pp;
+output wire[33:0] pp;
 
-always @(mulcand, r4input, sign) begin
-    case(r4input)
-//        3'b000: ;
-//        3'b001: ;
-//        3'b010: ;
-//        3'b011: ;
-//        3'b100: ;
-//        3'b101: ;
-//        3'b110: ;
-//        3'b111: ;
-        default: exp <= x;
-    endcase
-    
-end
+wire[32:0] raw;
 
-CLA inverser
+assign raw[32:0] = (r4input[1]^r4input[0] === 0)?
+    ((r4input[2]^r4input[0] === 0)?0:{mulcand[31:0], 1'b0}):
+    ((sign === 0)?{1'b0, mulcand[31:0]}:{mulcand[31], mulcand[31:0]});
 
+genvar i;
+generate
+    for(i = 0;i <= 32; i = i+1) begin
+        assign pp[i] = raw[i]^r4input[2];
+    end
+endgenerate
+
+assign pp[33] = (sign === 0)? 0 : (raw[32]^r4input[2]);
     
 endmodule

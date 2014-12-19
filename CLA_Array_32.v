@@ -16,33 +16,8 @@ genvar i;
 generate
     for(i = 0;i < 8;i = i+1) begin : b4csa_array
         CLA #4 inst(a[i*4+3:i*4], b[i*4+3:i*4], Cii[i], result[(i*4+3):(i*4)], Cio[i], Pi[i], Gi[i]);
-        //assign result[(i*4+3):(i*4)] = Ri[(i*4+3):(i*4)];
     end
 endgenerate
-
-//CSA #4 inst_0(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_1(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_2(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_3(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_4(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_5(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_6(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
-
-//CSA #4 inst_7(a[i*4+3:i*4], b[i*4+3:u*4], Cii[i], Ri[i], Cio[i], Pi[i], Gi[i]);
-//assign result[i*4+3:i*4] = Ri[i*4+3:i*4];
 
 assign Cii[0] = cin;
 assign Cii[1] = Cio[0];
