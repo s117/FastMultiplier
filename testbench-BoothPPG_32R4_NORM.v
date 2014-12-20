@@ -48,7 +48,7 @@ task check(input [31:0]cand);
                 3'b110: expectPP[32:0] = ~{1'b0, cand[31:0]};
                 3'b111: expectPP[32:0] = ~33'b0;
             endcase
-            expectPP[33] = 0;
+            expectPP[33] = r4input[2];
             #10;
             if(pp !== expectPP) begin
                 $display("fail: cand = %x, r4input = %3b, sign = %x, expect pp = %x, but actual pp = %x", cand , r4input, sign, expectPP, pp);
