@@ -1,4 +1,4 @@
-`define ZERO_BIT 1'b0
+//`define ZERO_BIT 1'b0
 module PP_Compressor(i, pp0, pp1, pp2, pp3,
                         pp4, pp5, pp6, pp7,
                         pp8, pp9, pp10, pp11,
@@ -25,6 +25,8 @@ input wire[33:0] pp15;
 input wire[31:0] pp16;
 output wire[62:0] C;
 output wire[63:0] S;
+
+supply0 ZERO_BIT;
 
 wire[33:0] C11; wire[33:0] S11;
 wire[33:0] C12; wire[33:0] S12;
@@ -94,13 +96,13 @@ CSA #34 CSA12(
 	.cout(C12), .sum(S12));
 
 CSA #38 CSA22(
-	.a({pp16[31:0], ZERO_BIT, i[15], pp13[3:0]}), 
-	.b({C12[32:0], ZERO_BIT, pp14[1:0], {2{ZERO_BIT}}}), 
+	.a({pp16[31:0], ZERO_BIT, i[15], {pp13[3:0]}}), 
+	.b({C12[32:0], ZERO_BIT, {pp14[1:0], {2{ZERO_BIT}}}}), 
 	.cin({S12[33:0], ZERO_BIT, i[14], ZERO_BIT, i[13]}), 
 	.cout(C22), .sum(S22));
 
 CSA #40 CSA31(
-	.a({{6{S12[33]}}, S21[33:0]}), 
+	.a({{6{S21[33]}}, S21[33:0]}), 
 	.b({C22[36:0], {3{ZERO_BIT}}}), 
 	.cin({S22[37:0], ZERO_BIT, i[12]}), 
 	.cout(C31), .sum(S31));
@@ -112,8 +114,8 @@ CSA #39 CSA32(
 	.cout(C32), .sum(S32));
 
 CSA #46 CSA41(
-	.a({{5{C21[33:0]}}, ZERO_BIT, {C11[0], ZERO_BIT}, {pp9[3:0]}}), 
-	.b({C31[38:0], ZERO_BIT, {S11[1:0]}, {pp10[1:0], ZERO_BIT}}), 
+	.a({{5{C21[33]}}, C21[33:0], ZERO_BIT, {C11[0], ZERO_BIT}, {pp9[3:0]}}), 
+	.b({C31[38:0], ZERO_BIT, {S11[1:0]}, {pp10[1:0], {2{ZERO_BIT}}}}), 
 	.cin({S31[39:0], ZERO_BIT, i[11], ZERO_BIT, i[10], ZERO_BIT, i[9]}), 
 	.cout(C41), .sum(S41));
 
@@ -130,16 +132,15 @@ CSA #47 CSA51(
 	.cout(C51), .sum(S51));
 
 CSA #57 CSA61(
-	.a({C41[38:0], {13{ZERO_BIT}}, {pp4[3:0]}, ZERO_BIT}), 
-	.b({S41[39:0], {7{ZERO_BIT}}, i[8], ZERO_BIT, i[7], {2{ZERO_BIT}}, {pp5[1:0], {2{ZERO_BIT}}}, ZERO_BIT}), 
-	.cin({{11{C51[45]}}, C51[45:0]}), 
+	.a({C41[44:0], {7{ZERO_BIT}}, {pp4[3:0]}, ZERO_BIT}), 
+	.b({S41[45:0], ZERO_BIT, i[8], ZERO_BIT, i[7], {2{ZERO_BIT}}, {pp5[1:0], {2{ZERO_BIT}}}, ZERO_BIT}), 
+	.cin({{10{C51[46]}}, C51[46:0]}), 
 	.cout(C61), .sum(S61));
 
 CSA #64 CSA71(
-	.a({C61[55:0], {2{ZERO_BIT}}}), 
-	.b({S61[56:0], ZERO_BIT}), 
-	.cin({{11{S51[46]}}, {S51[46:0], ZERO_BIT, i[2], ZERO_BIT, i[1], ZERO_BIT, i[0]}}), 
+	.a({C61[55:0], {2{ZERO_BIT}}, {C13[0], ZERO_BIT}, {pp0[3:0]}}), 
+	.b({S61[56:0], ZERO_BIT, {S13[1:0]}, {pp1[1:0], {2{ZERO_BIT}}}}), 
+	.cin({{11{S51[46]}}, S51[46:0], ZERO_BIT, i[2], ZERO_BIT, i[1], ZERO_BIT, i[0]}), 
 	.cout(C71), .sum(S71));
 
 endmodule
-

@@ -18,6 +18,6 @@ generate
     end
 endgenerate
 
-assign pp[33] = (sign === 0)? 0 : (raw[32]^r4input[2]);
+assign pp[33] = (sign === 0)?r4input[2]:pp[32];
     
 endmodule

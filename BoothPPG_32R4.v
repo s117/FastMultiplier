@@ -1,5 +1,5 @@
 module BoothPPG_32R4(a ,b, sign,
-    pp0, pp1, pp2, pp3,
+    i, pp0, pp1, pp2, pp3,
     pp4, pp5, pp6, pp7,
     pp8, pp9, pp10, pp11,
     pp12, pp13, pp14, pp15,
@@ -9,6 +9,7 @@ input wire[31:0] a;
 input wire[31:0] b;
 input wire sign;
 
+output wire[15:0] i;
 output wire[33:0] pp0;
 output wire[33:0] pp1;
 output wire[33:0] pp2;
@@ -26,6 +27,8 @@ output wire[33:0] pp13;
 output wire[33:0] pp14;
 output wire[33:0] pp15;
 output wire[31:0] pp16;
+
+assign i[15:0] = {b[31], b[29], b[27], b[25], b[23], b[21], b[19], b[17], b[15], b[13], b[11], b[9], b[7], b[5], b[3], b[1]};
 
 BoothPPG_32R4_NORM ppg0( .mulcand(a), .r4input({b[1:0],1'b0}), .sign(sign), .pp(pp0));
 BoothPPG_32R4_NORM ppg1( .mulcand(a), .r4input(b[3:1]),        .sign(sign), .pp(pp1));

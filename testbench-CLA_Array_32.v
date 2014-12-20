@@ -19,7 +19,7 @@ initial begin
     #10;
     if ({cout,result} !== expectOutput) begin
         errorFlag = 1;
-        $display("test fail: expect %x + %x = %x, actual %x", a, b, {cout,result}, expectOutput);
+        $display("test fail: expect %x + %x = %x, actual %x", a, b, expectOutput, {cout,result});
     end
 
     a = 32'h00000000;
@@ -28,7 +28,7 @@ initial begin
     #10;
     if ({cout,result} !== expectOutput) begin
         errorFlag = 1;
-        $display("test fail: expect %x + %x = %x, actual %x", a, b, {cout,result}, expectOutput);
+        $display("test fail: expect %x + %x = %x, actual %x", a, b, expectOutput, {cout,result});
     end
 
     a = 32'h11111111;
@@ -37,7 +37,7 @@ initial begin
     #10;
     if ({cout,result} !== expectOutput) begin
         errorFlag = 1;
-        $display("test fail: expect %x + %x = %x, actual %x", a, b, {cout,result}, expectOutput);
+        $display("test fail: expect %x + %x = %x, actual %x", a, b, expectOutput, {cout,result});
     end
 
     for(i = 0;i < 32'hffff; i = i+1) begin
@@ -47,7 +47,7 @@ initial begin
         #10;
         if ({cout,result} !== expectOutput) begin
             errorFlag = 1;
-            $display("test fail: expect %x + %x = %x, actual %x", a, b, {cout,result}, expectOutput);
+            $display("test fail: expect %x + %x = %x, actual %x", a, b, expectOutput, {cout,result});
         end
     end
 
