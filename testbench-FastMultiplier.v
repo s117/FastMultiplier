@@ -63,9 +63,11 @@ initial begin
     check(-1, 9);
     check(-1, -1);
     check(0, 0);
+    check(32'hffffffff,32'hffffffff);
     check(32'h80000000, 6);
     check(32'h80000000, 14);
     check(32'h80000000, 2);
+    
 
     if (errorFlag === 0) begin
         $display("Test passed");
